@@ -1,0 +1,16 @@
+{
+  "name": "giphyproject",
+  "version": "1.0.0",
+  "description": "NPM for Giphy project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "watchify ./src/js/app.js -o ./dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "giphy": "0.0.4",
+    "jquery": "^3.0.0"
+  }
+}
