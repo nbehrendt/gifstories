@@ -1,14 +1,24 @@
-// Normailize
-@import "base/_normalize";
+.header {
+  background: #ddd;
+  height: 200px;
+  width: 100%; }
 
-// Base
-@import "base/_typography";
-@import "base/_links";
-@import "base/_variables";
+.gif-logo {
+  border: 1px solid black;
+  height: 80%;
+  width: 200px; }
 
-// Layout
-@import "layout/_grid";
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_sidebar";
-@import "layout/_print";
+#main-input {
+  border: 1px solid #ddd;
+  color: #000ddd;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  width: 80%; }
+  #main-input:focus {
+    background: tomato;
+    border: 1px solid #ddd;
+    outline: none; }

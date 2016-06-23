@@ -1,0 +1,16 @@
+#main-input {
+  border: 1px solid #ddd;
+  color: #000ddd;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  width: 80%;
+  &:focus {
+    background: tomato;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+}
