@@ -1,6 +1,14 @@
+.initial-card {
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  padding: 20px;
+}
+
 .story-card {
   background: #B9D6F2;
   border-radius: 5px;
+  font-family: 'Helvetica', sans-serif;
   margin: 10px 15px;
   padding: 5px;
   text-align: center;
@@ -8,26 +16,18 @@
 
 .card-header {
   display: inline-block;
+  font-size: 1.6rem;
   max-width: 60%;
-  // left: 300px;
-  // width: 70%;
   @media(max-width:900px) {
     width: 100%;
   }
 }
 
-.gif-container {
-  // width: 30%;
-  // @media(max-width: 900px) {
-  //   width: 100%;
-  // }
-}
-
 .card-gif {
   display: inline-block;
   float: left;
-  max-width: 250px;
-  @media(max-width: 900px) {
+  width: 30%;
+  @media handheld, screen and (max-width: 900px) {
     float: none;
     margin: 5px auto;
     width: 100%;

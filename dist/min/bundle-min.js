@@ -1,0 +1,1 @@
+console.error("Error: Parsing file /Users/nealbehrendt/Sites/gifstories/src/js/app.js: Unexpected token (76:0)");

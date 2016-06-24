@@ -1,33 +1,61 @@
 #main-input {
-  background: #fff;
-  border: 1px solid #fff;
-  color: #000ddd;
-  font-size: 1.8rem;
+  background: #ECFFF3;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1.4rem;
   line-height: 2rem;
   height: 2rem;
-  left: 50%;
   margin: 0 auto;
-  max-width: 600px;
   opacity: 0.9;
-  position: fixed;
-  top: 150px;
-  transform: translateX(-50%);
-  width: 80%;
+  padding: 2px;
+  width: 90%;
   z-index: 2;
   &:focus {
-    border: 1px solid #ddd;
+    background: rgba(253,253,253,0.8);
+    border: none;
+    border-bottom: 2px solid #ddd;
+    color: #000;
     opacity: 1;
     outline: none;
   }
 }
 
-#clear-button {
-  background: #000;
-  border: none;
+#submit-form {
+  background: #061A40;
+  border: solid 2px #061A40;
   border-radius: 5px;
   color: #fff;
-  height: 20px;
-  position: fixed;
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 30px;
+  margin-left: 1%;
+  position: absolute;
+  text-align: center;
+  transition: all 0.2s ease;
+  width: 9%;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+#clear-button {
+  background: tomato;
+  border: solid 2px tomato;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 30px;
+  position: absolute;
+  right: 10%;
+  text-align: center;
+  bottom: 5%;
   transition: all 0.2s ease;
   width: 100px;
   &:focus {

@@ -1,22 +1,27 @@
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700|Alfa+Slab+One' rel='stylesheet' type='text/css'>
-  <link href="../src/css/styles.css" rel="stylesheet"/>
+  <link href="../css/styles.css" rel="stylesheet"/>
   <script src="bundle.js"></script>
 </head>
 <body>
   <div class="main">
       <div class="header">
         <h1 class="title">GIFstory</h1>
+        <h3 class="sub-title">Animate your stories</h3>
         <!-- <div class="gif-logo"></div> -->
       </div>
       <div class="content">
-        <form class="search-input">
-          <input id="main-input" placeholder="What happened?" type="text" />
-        </form>
-        <button id="clear-button">Clear story</button>
+        <div class="search-input">
+          <input id="main-input" placeholder="What happened?" type="text" /><div id="submit-form" onclick="grabGif();" type="button">&#62;</div>
+        </div>
+        <button id="clear-button">Clear</button>
         <div class="story-container">
+          <div class="initial-card">
+            Go ahead, start typing your story in the field above and we&#39;ll illustrate it for you.
+          </div>
         </div>
       </div>
   </div>
