@@ -16094,8 +16094,15 @@ var s = require("./sparse");
 
 $(document).ready(function() {
 
-  var $storyCard = $('.story-card');
+  var $storyContainer = $('.story-container');
   var $mainInput = $('#main-input');
+  var clearBtn = $('#clear-button');
+
+  // clear story
+  clearBtn.click(function(){
+    $('.story-card').remove();
+    $mainInput.attr('placeholder', 'What happened?')
+  })
 
   // define function to make API call to Giphy
 
@@ -16105,12 +16112,16 @@ $(document).ready(function() {
     var keyword = s.sparse(inputValue);
 
     api.getGiphy(keyword, function(url) {
-      console.log(url);
-      $storyCard.append(`<div class="new-gif"><img src="${url}" /></div>`)
-      url = null;
+      $storyContainer.append(`
+        <div class="story-card">
+          <div class="card-header">${inputValue}</div>
+              <img class="card-gif" src="${url}" />
+          <div class="clearfix"></div>
+        </div>
+      `)
     })
-    $storyCard.append(`<div>${inputValue}</div>`)
     $mainInput.val('');
+    $('.story-container').animate({ scrollTop: $('.story-container')[0].scrollHeight}, 1000);
   }
 
   // execute function on enter
@@ -16121,10 +16132,11 @@ $(document).ready(function() {
 
       grabGif();
 
+      if($('.story-card')) {
+        $mainInput.attr('placeholder', 'Then what happened?');
+      }
+
     }
-
-
-    //append text value
 
   });
 
@@ -16147,7 +16159,7 @@ module.exports = {
 
 },{"giphy":1}],24:[function(require,module,exports){
 var sparse = function(string) {
-  string = string.replace(/[^\w\s]/gi, '');
+  string = string.replace(/[^\w\s]/gi, ''); // clear punctuation and special characters
   var splitString = string.split(" ");
 
   if (splitString.length > 2) {

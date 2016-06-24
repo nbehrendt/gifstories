@@ -1,24 +1,105 @@
-.header {
-  background: #ddd;
-  height: 200px;
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  background: #ECFFF3;
+  height: 100%;
   width: 100%; }
 
-.gif-logo {
-  border: 1px solid black;
-  height: 80%;
-  width: 200px; }
+.clearfix {
+  clear: both; }
+
+.main {
+  height: 100%;
+  position: absolute;
+  width: 100%; }
+
+.header {
+  background: rgba(253, 253, 253, 0.2);
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 2; }
+
+.content {
+  clear: both; }
+
+.story-container {
+  background: #061A40;
+  border-radius: 5px;
+  height: 70vh;
+  margin: 0 auto;
+  margin-top: 200px;
+  overflow: scroll;
+  width: 80%; }
 
 #main-input {
-  border: 1px solid #ddd;
+  background: #fff;
+  border: 1px solid #fff;
   color: #000ddd;
   font-size: 1.8rem;
   line-height: 2rem;
   height: 2rem;
+  left: 50%;
   margin: 0 auto;
   max-width: 600px;
-  position: relative;
-  width: 80%; }
+  opacity: 0.9;
+  position: fixed;
+  top: 150px;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 2; }
   #main-input:focus {
-    background: tomato;
     border: 1px solid #ddd;
+    opacity: 1;
     outline: none; }
+
+#clear-button {
+  background: #000;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  height: 20px;
+  position: fixed;
+  transition: all 0.2s ease;
+  width: 100px; }
+  #clear-button:focus {
+    outline: none; }
+  #clear-button:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer; }
+
+.story-card {
+  background: #B9D6F2;
+  border-radius: 5px;
+  margin: 10px 15px;
+  padding: 5px;
+  text-align: center; }
+
+.card-header {
+  display: inline-block;
+  max-width: 60%; }
+  @media (max-width: 900px) {
+    .card-header {
+      width: 100%; } }
+
+.card-gif {
+  display: inline-block;
+  float: left;
+  max-width: 250px; }
+  @media (max-width: 900px) {
+    .card-gif {
+      float: none;
+      margin: 5px auto;
+      width: 100%; } }
+
+.title {
+  color: #A2E8A3;
+  font-family: 'Alfa Slab One', sans-serif;
+  margin-top: 10px;
+  text-align: center; }
+
+h1 {
+  font-size: 3rem; }

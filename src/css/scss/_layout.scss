@@ -1,12 +1,46 @@
-.header {
-  background: #ddd;
-  height: 200px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background: #ECFFF3;
+  height: 100%;
   width: 100%;
 }
 
-.gif-logo {
-  border: 1px solid black;
-  // background: url('');
-  height: 80%;
-  width: 200px;
+.clearfix {
+  clear: both;
+}
+
+.main {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.header {
+  background: rgba(253,253,253,0.2);
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.content {
+  clear: both;
+}
+
+.search-input {
+}
+
+.story-container {
+  background: #061A40;
+  border-radius: 5px;
+  height: 70vh;
+  margin: 0 auto;
+  margin-top: 200px;
+  overflow: scroll;
+  // position: fixed;
+  width: 80%;
 }

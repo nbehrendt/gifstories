@@ -1,5 +1,5 @@
 var sparse = function(string) {
-  string = string.replace(/[^\w\s]/gi, '');
+  string = string.replace(/[^\w\s]/gi, ''); // clear punctuation and special characters
   var splitString = string.split(" ");
 
   if (splitString.length > 2) {
