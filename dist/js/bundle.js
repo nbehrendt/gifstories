@@ -16126,14 +16126,13 @@ $(document).ready(function() {
       `)
     })
     $mainInput.val('');
-    $storyContainer.animate({ scrollTop: $storyContainer[0].scrollHeight}, 1000);
+    $storyContainer.animate({scrollTop: $storyContainer[0].scrollHeight}, 1000); // always display newest story card
   }
 
   // execute function on enter
 
   $(document).keypress(function(e) {
     if (e.which == 13) {
-      e.preventDefault();
 
       if($initialCard) {
         $initialCard.hide();
@@ -16144,15 +16143,13 @@ $(document).ready(function() {
       if($('.story-card')) {
         $mainInput.attr('placeholder', 'Then what happened?');
       }
+
     }
   });
 
   // execute function on button click
 
   $submitBtn.click(function(e) {
-
-    e.preventDefault();
-
     if($initialCard) {
       $initialCard.hide();
     }
